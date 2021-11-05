@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===================================== Donation Process CSS ================================== */
+.donation-care {
+    padding: 50px;
+    background-color: #FFF; }
+    @media screen and (max-width: 940px) {
+      .donation-care {
+        padding: 30px 10px; } }
+    .donation-care h2 {
+      padding: 10px;
+      margin-bottom: 0px;
+      font-size: 1rem;
+      font-weight: 600; }
+    .donation-care p {
+      padding: 10px;
+      padding-top: 0px;
+      text-align: justify;
+      font-size: .85rem; }
+    .donation-care i {
+      font-size: 13px;
+      margin-left: 10px; }
+    .donation-care .vd {
+      margin-bottom: 20px; }
+    .donation-care .bkjiu {
+      background-color: #F8F9FA;
+      padding: 5px; }
+      .donation-care .bkjiu .btn {
+        margin-bottom: 6px;
+        margin-left: 6px; }
+  
+  @media screen and (max-width: 940px) {
+    .health-care {
+      padding: 50px 10px; } }
+  
+      
+
+/*________________Logo+Bar_________________________*/
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none; /*removing bullets form bar*/
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*__________________Style for image_______________________*/
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+/*Explore Button*/
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #563434;
+}
+
+/*___________________Header to change background color_________________*/
+.header{
+    background: radial-gradient(#fff,#ffd6d6);
+}
+
+/*spacing from top
+.header .row{
+   margin-top: 70px; 
+}
+*/
+
+.categories{
+    margin: 70px 0;
+}
+.col-3{
+    flex-basis: 35%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    transition: transform 0.5s;
+}
+.col-3 img{
+    width: 100%;
+}
+.title{
+        text-align: center;
+        margin: 0 auto 80px;
+        position: relative;
+        line-height: 60px;
+        color: #555;
+}
+.title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.col-3:hover{
+    transform: translateY(-5px);
+}
+
+h4{
+    color: #555;
+    font-weight: normal;
+}
+
+/*_____________________Foooter___________________________ */
+.footer{
+   background: #000;
+   color: #8a8a8a;
+   font-size: 14px;
+   padding: 60px 0 20px; 
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;   
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 20px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 25%;
+}
+
+.footer-col-2{
+    flex: 1;
+    text-align: left;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3,.footer-col-4{
+    flex-basis: 20%;
+    text-align: left;
+}
+ul{
+    list-style-type: none;
+}
+
+.applogo{
+    margin-top: 20px;
+}
+.applogo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
+
+
+/*______________MENU_______________________*/
+.menu{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+/*Medi query for menu*/
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right:  50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a{
+        color: #fff;
+    }
+    
+
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/*media query for less than 600px screen size*/
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3{
+        flex-basis: 100%;
+    }
+}

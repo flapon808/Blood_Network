@@ -1,0 +1,178 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Network: Home</title>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'image/blood.jpg' %}"/>
+    
+    <!--CSS location-->
+    <link rel="stylesheet"  href="{% static 'css/index.css' %}" >
+    <link rel="icon" href="static/image/fav.ico" type="image/x-icon">
+
+    <!--Font form google Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <!-- <img src="static/image/logo_transparent.png" width="125px"> -->
+            </div>
+            <nav>
+                <!--navigation bar-->
+                <ul id="MenuItems">
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="{% url 'login' %}">Log In</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </nav>  
+
+            <!--Use for cart if needed-->
+            <!--
+             <img src="" width="30px" height="30px">
+             -->
+             <img src="static/image/menu.png" class="menu" onclick="menutoggle()">
+
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>Welcome to <b>Blood NetWork</b>
+                </h1>
+                <p><b>Saving lives.</p>
+                <a href="http://127.0.0.1:8000/registration.html" class="btn">Join Us &#8594;</a> <!--&#8594; code for arrow icon-->
+            </div>
+            <div class="col-2">
+                <img src="static/image/background2.png">
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+
+        <!-- ################# Donation Process Start Here #######################--->
+     
+     <section id="process" class="donation-care">
+        <div class="container">
+          <div class="row session-title">
+              <h2><b>Donation Process</b></h2>
+              <p>The donation process from the time you arrive center until the time you leave</p>
+          </div>
+           <div class="row">
+                <div class="col-md-3 col-sm-6 vd">
+                   <div class="bkjiu">
+                    <img src="static/image/category/g1.jpg">
+                    <h4><b>1 - </b>Registration</h4>
+                    
+                    <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 vd">
+                   <div class="bkjiu">
+                    <img src="static/image/category/g2.jpg">
+                       <h4><b>2 - </b>Seeing</h4>
+                    
+                    <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 vd">
+                   <div class="bkjiu">
+                    <img src="static/image/category/g3.jpg">
+                       <h4><b>3 - </b>Donation</h4>
+                    
+                    <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 vd">
+                   <div class="bkjiu">
+                    <img src="static/image/category/g4.jpg">
+                       <h4><b>4 - </b>Save Life</h4>
+                        
+                        <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                   </div> 
+                </div>
+           </div>
+           
+            
+        </div>
+    </section>
+
+        <!--Featured product-->
+        <!--  33:33// 44 must
+        <div class="small-container">
+            <h2>Featured Products</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+        -->
+       
+       <!--Foooter--> 
+       <div class="footer">
+           <div class="container">
+               <div class="row">
+                   <div class="footer-col-1">
+                       <h3>Our official App</h3>
+                       <p>Coming Soon</p>
+                       <div class="applogo">
+                           <img src="static/image/play-store.png">
+                           <img src="static/image/app-store.png">
+                       </div>
+                   </div>
+                   <div class="footer-col-2">
+                    <h3>Our Partner</h3>
+                        
+                        <p>Coming Soon. </p>
+                    
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <a href="http://facebook.com/"> <li>Facebook</li></a> 
+                            <a href="https://www.youtube.com/"> <li>Youtube</li> </a>
+                            <a href="https://www.instagram.com/"> <li>Instagram</li> </a>
+                            <a href="https://twitter.com/"> <li>Twitter</li> </a> 
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Contact Us:</h3>
+                        <ul>
+                            <li><p>+880 123456789 <br> +880 987654321</p></li>
+                            <li><p>svengali@gmail.com</p></li>
+                        </ul>
+                    </div>
+                </div>
+               </div>
+               <hr>
+               
+               <p class="copyright">Copyright © Svengali | All right reserved.</p>
+           </div>
+       </div>
+
+       <!-------------js for toogle menu------------->
+       <script>
+           var MenuItems = document.getElementById("MenuItems");
+           MenuItems.style.maxHeight="0px";
+           function menutoggle(){
+               if(MenuItems.style.maxHeight=="0px"){
+                   MenuItems.style.maxHeight = "200px"
+               }
+               else{
+                MenuItems.style.maxHeight = "0px"
+               }
+           }
+       </script>
+        
+
+</body>
+</html>
