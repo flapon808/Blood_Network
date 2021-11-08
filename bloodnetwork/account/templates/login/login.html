@@ -4,11 +4,11 @@
 	<title>Login Form</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- <link rel="stylesheet"  href="{% static 'css/style.css' %}" > -->
+	<link rel="stylesheet"  href="{% static 'css/style.css' %}" >
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet"  href="{% static 'css/login.css' %}" >
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
+	<link rel="stylesheet"  href="{% static 'css/Login.css' %}" > 
 	<link rel="shortcut icon" type="image/jpg" href="{% static 'image/blood.jpg' %}"/>
 </head>
 <body>
@@ -43,15 +43,15 @@
 								</div>
 							</div>
 							<div class="col-6 text-right">
-								<a href="{% url 'reset_password' %}" class="forget-link">Forget Password</a>
+								<a href="#" class="forget-link">Forget Password</a>
 							</div>
 						</div>
 						<div class="text-left mb-3">
 							<button type="submit" class="btn">Login</button>
 						</div>
 						
-						<div style="color: #777">Don't have an account
-							<a href="registration.html" class="register-link">Register here</a>
+						<div style="color: rgb(247, 243, 243)">Don't have an account?
+							<a href="http://127.0.0.1:8000/registration" class="register-link">Register here</a>
 						</div>
 					</form>
 					<div>	

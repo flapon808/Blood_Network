@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+.nav-item{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+.navbar-brand {
+    font-size: 25px;
+    line-height: 50px;
+    padding: 5px;
+    display: inline-block;
+    font-weight: bold;
+    animation: blinkingtext 2s infinite;
+}
+@keyframes blinkingtext{
+    0%		{ color: #ffffff;}
+    25%		{color: #1056c0;}
+    75%	{ color: #010303;}
+    100%	{ color: #f31c1c;}
+
+}
+/*___________________Header to change background color_________________*/
+.header{
+    background-color:rgba(233, 20, 20, 0.87)
+
+}

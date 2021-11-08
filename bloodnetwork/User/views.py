@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from User.models import profile
+# from User.models import profile
 from django.contrib import messages
 from .models import profile
 from django.contrib.auth.decorators import login_required
@@ -7,11 +7,12 @@ from .forms import  Donorinfo
 
 
 # Create your views here.
+@login_required(login_url='login')
 def editinfo(request):
     profile=request.user.profile
     forms = Donorinfo(instance=profile)
     if request.method=="POST":
-         form =Donorinfo(request.POST,instance=profile)
+         form =Donorinfo(request.POST,request.FILES,instance=profile)
          if form.is_valid():
               form.save()
               return redirect("profile.html")
@@ -19,7 +20,7 @@ def editinfo(request):
     return render(request,'editinfo/editinfo.html', context)
 
 
-
+@login_required(login_url='login')
 def userProfile(request):
     profile=request.user.profile
     context={

@@ -10,4 +10,5 @@ from home import views
 urlpatterns = [
     path('',views.index,name="index"),
     path('home.html',views.home,name="home"),
+    path('About_us/',views.aboutus,name="AboutUs"),
 ]

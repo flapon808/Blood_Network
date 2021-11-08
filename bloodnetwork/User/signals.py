@@ -4,13 +4,14 @@ from django.dispatch import receiver
 from django.contrib.auth.models import User
 from .models import profile
 
-@receiver(post_save, sender=profile)
+# @receiver(post_save, sender=profile)
 def createProfile(sender,instance,created,**kawrgs):
     if created:
         user=instance
         Profile=profile.objects.create(
             user=user,
-            Email=user.Email , 
+            Name=user.first_name,
+            Email=user.email, 
         )
 
 
@@ -38,7 +39,7 @@ def updateUser(sender,instance,created,**kwargs):
         user.Area=profile.Area
         user.Postal_Code=profile.Postal_Code
         user.last_donate_date=profile.last_donate_date
-        user.  any_disease=profile.any_disease
+        user.any_disease=profile.any_disease
         user.save()
 
 

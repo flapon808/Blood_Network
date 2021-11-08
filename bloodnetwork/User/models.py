@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class profile(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
-    profile_img=models.ImageField(null=True,upload_to='profiles/',default="profiles/default.png")
+    profile_img=models.ImageField(null=True,upload_to='profiles/',blank=True,default="profiles/default.png")
     Name = models.CharField(max_length=20)
     Email =  models.EmailField(null=True)
     Date_of_Birth = models.DateField(null=True)
@@ -24,7 +24,7 @@ class profile(models.Model):
     District = models.ForeignKey("District",on_delete=models.CASCADE,related_name="district" ,null=True)
     Area = models.CharField(max_length= 20,null=True) 
     Postal_Code = models.IntegerField(null=True) 
-    last_donate_date = models.DateField(null=True)
+    last_donate_date = models.DateField(null=True, blank = True)
     any_disease = models.CharField(max_length= 20,null=True) 
 
 

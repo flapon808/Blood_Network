@@ -6,52 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+    <link href="{% static 'css/profile.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/fontawsom-all.min.css' %}">
+
     <link rel="stylesheet"  href="{% static 'css/registration.css' %}" >
     <link rel="shortcut icon" type="image/jpg" href="{% static 'image/blood.jpg' %}"/>
   
     <title>Registration</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Blood Network</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="Home.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Search.html">Search</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="registration.html">Registration</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="aboutus.html">About Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Services
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-               </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactus.html">Contact Us </a>
+    
+    <header class="continer-fluid ">
+      <div class="header-top">
+        <div class="container">
+          <div class="row col-det">
+            <div class="col-lg-6 d-none d-lg-block">
+              <ul class="ulleft">
+                <li>
+                  <i class="far fa-envelope"></i>
+                  svengali@gmail.com
+                  <span>|</span>
                 </li>
-            </ul>
-            
+                <li>
+                  <i class="far fa-clock"></i>
+                  Service Time : 24/7
+                </li>
+              </ul>
+            </div>
+  
+  
           </div>
         </div>
-      </nav>
+      </div>
+  
+      <!-- head-part  -->
+  
+      <div id="menu-jk" class="header-bottom">
+        <div class="container">
+          <div class="row nav-row">
+            <div class="col-md-3 logo">
+              <!--<img src="static/image/blood.jpg" alt=""> -->
+            </div>
+            <div class="col-md-11 nav-col">
+              <nav class="navbar navbar-expand-lg navbar-light">
+  
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="home.html">Home
+                      </a>
+                    </li>
+  
+                    <li class="nav-item">
+                      <a class="nav-link" href="bloodbank">Bloodbank Info</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="home.html#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="home.html#process">Process</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="home.html#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="home.html#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="home.html#contact">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     
@@ -70,7 +115,7 @@
 <div class="container">
             <form class="form-horizontal" role="form" action="/editinfo" method="post" enctype="multipart/form-data">
               {% csrf_token %}
-                <h2>Registration</h2>  
+                <h2>Update Your Info</h2>  
                 <div class="form-group">
                     <div class="col-sm-9">
                      {{forms.as_p}}
@@ -86,5 +131,98 @@
                 <button type="submit" class="btn btn-primary btn-block">Register</button>
             </form> <!-- /form -->
         </div> <!-- ./container -->
+        
+        <!--*************** Footer  Starts Here *************** -->
+  <style>
+    /* .position {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    } */
+
+    .profile {
+      padding-left: 20px;
+    }
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .form_pd{
+      padding-left: 15px;
+    }
+    .contact_pdding{
+      padding-left: 35px;
+    }
+
+  </style>
+
+    <div class="row content-ro" style="background-color: red; color: seashell;">
+      <div class="col-lg-4 col-md-12 footer-contact ">
+        <h2 class=" contact_pdding"> Contact Informatins</h2>
+        <div class="address-row">
+
+          <div class="detail contact_pdding">
+            <p>74/A Green Rd, Dhaka 1205</p>
+          </div>
+        </div>
+        <div class="address-row">
+
+          <div class="detail contact_pdding">
+            <p>svengali@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-12 footer-links">
+        <div class="row no-margin mt-2">
+          <h2>Quick Links</h2>
+          <ul style="color:white;">
+            <br>
+            <li><a href="home.html"> Home</li> </a>
+            <li><a href="#about"> About Us</li> </a>
+            <li><a href="#contact"> Contacts </li> </a>
+            <li><a href="#gallery"> Gallery</li> </a>
+
+
+          </ul>
+        </div>
+
+
+
+      </div>
+      <div class="col-lg-4 col-md-12 footer-links">
+
+        <div class="row no-margin mt-1">
+          <h2 class="m-t-2">More Links</h2>
+          <ul>
+            <a href="http://facebook.com/">
+              <li>Facebook</li>
+            </a>
+            <a href="https://www.youtube.com/">
+              <li>Youtube</li>
+            </a>
+            <a href="https://www.instagram.com/">
+              <li>Instagram</li>
+            </a>
+            <a href="https://twitter.com/">
+              <li>Twitter</li>
+            </a>
+
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  
+  
+  
   </body>
+
+
 </html>

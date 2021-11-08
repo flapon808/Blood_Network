@@ -1,11 +1,11 @@
 .image-container{
-    background: url('/static/image/Bloodlf.jpg');
+    background: url('/static/image/Savelife.png') center no-repeat;
     background-size: cover;
     height: 100vh;
 }
 
 .form-container{
-    background : linear-gradient(red,white);
+    background-color: #ec6d6d;
     display: flex;
     justify-content: center;
 }

@@ -11,7 +11,7 @@ class Donorinfo(ModelForm):
         fields = ["profile_img" ,"Name" ,"Email" ,"Date_of_Birth" ,"PhoneNumber" ,"Gender" ,"Blood_Group" ,"Division" ,"District" ,"Area","Postal_Code" ,"last_donate_date" ,"any_disease"]
        
         widgets = {
-            'Name' : forms.TextInput(attrs={'class':'form-control','required':'True', 'placeholder':"FullName"}),
+            'Name' : forms.TextInput(attrs={'class':'form-control','required':'True', 'placeholder':"Full Name"}),
             'Email' : forms.EmailInput(attrs={'class':'form-control', 'required':'True'}),
             'Gender' : forms.Select(attrs={'class':'form-control', 'required':'True'}),
             'Date_of_Birth' : forms.DateInput(attrs={'class':'form-control', 'type':'date', 'required':'True'}),
@@ -21,6 +21,6 @@ class Donorinfo(ModelForm):
             'District' : forms.Select(attrs={'class':'form-control', 'required':'True'}),
             'Area' : forms.TextInput(attrs={'class':'form-control', 'required':'True'}),
             'PostalCode' : forms.Textarea(attrs={'class':'form-control', 'required':'True'}),
-            'last_donate_date' : forms.DateInput(attrs={'class':'form-control', 'required':'True'}),
-            'any_diseases' : forms.TextInput(attrs={'class':'form-control', 'required':'True'}),
+            'last_donate_date' : forms.DateInput(attrs={'class':'form-control','type':'date', 'required':'True'}),
+            'any_diseases' : forms.TextInput(attrs={'class':'form-control', 'required':'True' 'placeholder: If yes, Mention it'}),
         }
